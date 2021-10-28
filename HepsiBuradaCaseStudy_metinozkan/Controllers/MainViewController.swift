@@ -59,7 +59,7 @@ class MainViewController: UIViewController {
 }
 
 
-extension MainViewController :UITableViewDataSource,UITableViewDelegate {
+extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate {
     
 
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,11 +75,27 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate {
             cell.itemName.text = data.collectionName
             cell.itemDate.text = data.releaseDate
             cell.itemPrice.text = "$ \(data.collectionPrice)"
+            
+        
+            
+            
             return cell
         }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goDetail", sender: nil)
+        
+        }
+    
+    private func scrollViewDidScroll(_ scrollView: UIScrollView!){
+        let position = scrollView.contentOffset.y
+      
+        if position > (searchTableView.contentSize.height - scrollView.frame.size.height){
+            print("fetch more data")
+            skip = skip + 1
+            data()
+        }
+        
         
     }
     
