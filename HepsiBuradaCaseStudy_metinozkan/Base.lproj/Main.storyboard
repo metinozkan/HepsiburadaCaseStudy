@@ -16,12 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="SVI-fY-9ua">
-                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-rk-f6E">
+                            <searchBar contentMode="redraw" text="" translatesAutoresizingMaskIntoConstraints="NO" id="iSL-rk-f6E">
                                 <rect key="frame" x="0.0" y="44" width="414" height="51"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -33,22 +28,42 @@
                                     <segment title="Apps"/>
                                     <segment title="Books"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segmentedClicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="5lz-ge-e5e"/>
+                                </connections>
                             </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lBe-PZ-N7j">
+                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9ba-SW-6gH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="lg7-wO-SWd"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="lBe-PZ-N7j" firstAttribute="top" secondItem="ewN-xe-sWK" secondAttribute="bottom" constant="8" id="QbR-IX-1FY"/>
                             <constraint firstItem="iSL-rk-f6E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TEN-vT-QsB"/>
                             <constraint firstItem="iSL-rk-f6E" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VLt-HH-NpV"/>
+                            <constraint firstItem="lBe-PZ-N7j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VWl-KE-0zH"/>
                             <constraint firstItem="ewN-xe-sWK" firstAttribute="top" secondItem="iSL-rk-f6E" secondAttribute="bottom" id="aRx-mO-NnZ"/>
                             <constraint firstItem="iSL-rk-f6E" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ccx-Sv-q6N"/>
                             <constraint firstItem="iSL-rk-f6E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gRL-jJ-50m"/>
+                            <constraint firstItem="lBe-PZ-N7j" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gYg-Ym-8Hv"/>
                             <constraint firstItem="ewN-xe-sWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mDi-vb-ZyP"/>
                             <constraint firstItem="ewN-xe-sWK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mDw-HV-ZJt"/>
+                            <constraint firstAttribute="bottom" secondItem="lBe-PZ-N7j" secondAttribute="bottom" id="pXJ-Bc-xtf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewN-xe-sWK" secondAttribute="trailing" id="yxl-O4-ts3"/>
                             <constraint firstItem="ewN-xe-sWK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zOP-eK-eQF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="itemSegment" destination="ewN-xe-sWK" id="M8k-6e-Fsa"/>
+                        <outlet property="searchBar" destination="iSL-rk-f6E" id="NtN-oi-CTH"/>
+                        <outlet property="searchTableView" destination="lBe-PZ-N7j" id="XJc-6i-tay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

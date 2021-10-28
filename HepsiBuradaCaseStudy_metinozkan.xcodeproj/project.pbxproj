@@ -16,8 +16,10 @@
 		BF74F99F272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F99E272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanTests.swift */; };
 		BF74F9A9272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F9A8272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift */; };
 		BF74F9AB272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F9AA272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift */; };
-		BFE7BD91272B007B007BF0CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD90272B007B007BF0CA /* MainViewController.swift */; };
-		BFE7BD93272B0087007BF0CA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD92272B0087007BF0CA /* DetailViewController.swift */; };
+		BFE7BD95272B08AE007BF0CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD94272B08AE007BF0CA /* MainViewController.swift */; };
+		BFE7BD97272B08DE007BF0CA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */; };
+		BFE7BD9A272B104A007BF0CA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD98272B104A007BF0CA /* SearchCell.swift */; };
+		BFE7BD9B272B104A007BF0CA /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE7BD99272B104A007BF0CA /* SearchCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,10 @@
 		BF74F9A4272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HepsiBuradaCaseStudy_metinozkanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF74F9A8272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HepsiBuradaCaseStudy_metinozkanUITests.swift; sourceTree = "<group>"; };
 		BF74F9AA272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BFE7BD90272B007B007BF0CA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BFE7BD92272B0087007BF0CA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFE7BD94272B08AE007BF0CA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFE7BD98272B104A007BF0CA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		BFE7BD99272B104A007BF0CA /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,8 +156,8 @@
 		BFE7BD8E272AFFFC007BF0CA /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFE7BD90272B007B007BF0CA /* MainViewController.swift */,
-				BFE7BD92272B0087007BF0CA /* DetailViewController.swift */,
+				BFE7BD94272B08AE007BF0CA /* MainViewController.swift */,
+				BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +165,8 @@
 		BFE7BD8F272B0009007BF0CA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				BFE7BD98272B104A007BF0CA /* SearchCell.swift */,
+				BFE7BD99272B104A007BF0CA /* SearchCell.xib */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74F994272AC7830025C30A /* LaunchScreen.storyboard in Resources */,
+				BFE7BD9B272B104A007BF0CA /* SearchCell.xib in Resources */,
 				BF74F991272AC7830025C30A /* Assets.xcassets in Resources */,
 				BF74F98F272AC7800025C30A /* Main.storyboard in Resources */,
 			);
@@ -297,10 +304,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74F98C272AC7800025C30A /* ViewController.swift in Sources */,
+				BFE7BD9A272B104A007BF0CA /* SearchCell.swift in Sources */,
 				BF74F988272AC7800025C30A /* AppDelegate.swift in Sources */,
-				BFE7BD93272B0087007BF0CA /* DetailViewController.swift in Sources */,
+				BFE7BD97272B08DE007BF0CA /* DetailViewController.swift in Sources */,
 				BF74F98A272AC7800025C30A /* SceneDelegate.swift in Sources */,
-				BFE7BD91272B007B007BF0CA /* MainViewController.swift in Sources */,
+				BFE7BD95272B08AE007BF0CA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
