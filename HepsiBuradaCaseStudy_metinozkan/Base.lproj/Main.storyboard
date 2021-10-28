@@ -88,18 +88,53 @@
                                             <constraint firstAttribute="width" constant="180" id="oNz-N2-ofD"/>
                                         </constraints>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="0mX-u1-GDm">
+                                        <rect key="frame" x="40" y="210" width="334" height="129.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name : Fire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-5H-XWt">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="price : 18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-dL-EYF">
+                                                <rect key="frame" x="0.0" y="54.5" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data : 27.07.2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVy-y9-oQ5">
+                                                <rect key="frame" x="0.0" y="109" width="334" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Vst-5H-XWt" secondAttribute="trailing" id="2K6-yD-OCJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="DVy-y9-oQ5" secondAttribute="trailing" id="R9b-CE-XSK"/>
+                                            <constraint firstAttribute="trailing" secondItem="NlA-dL-EYF" secondAttribute="trailing" id="eF1-8O-1Kq"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
+                                    <constraint firstItem="0mX-u1-GDm" firstAttribute="leading" secondItem="8Ud-XR-KqH" secondAttribute="leading" constant="40" id="BGd-qE-8HV"/>
+                                    <constraint firstItem="0mX-u1-GDm" firstAttribute="top" secondItem="MtF-Pa-L6Y" secondAttribute="bottom" constant="50" id="I0u-P6-CX1"/>
                                     <constraint firstItem="MtF-Pa-L6Y" firstAttribute="top" secondItem="8Ud-XR-KqH" secondAttribute="top" constant="10" id="RKK-wu-ORm"/>
                                     <constraint firstAttribute="width" constant="414" id="W7v-aW-hUU"/>
+                                    <constraint firstAttribute="trailing" secondItem="0mX-u1-GDm" secondAttribute="trailing" constant="40" id="jFS-pJ-6Qo"/>
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3JA-rZ-8Bu">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Detaylar" id="geA-xb-Sjc">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="DPd-4O-vNN"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="arrow.backward" catalog="system" id="DPd-4O-vNN">
+                                            <connections>
+                                                <action selector="backButtonClick:" destination="PTG-83-Sch" id="aaq-9M-rdN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -118,16 +153,26 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="9Az-80-aYr"/>
+                    <connections>
+                        <outlet property="detailDate" destination="DVy-y9-oQ5" id="qfZ-BF-wiX"/>
+                        <outlet property="detailImage" destination="MtF-Pa-L6Y" id="bau-SU-547"/>
+                        <outlet property="detailName" destination="Vst-5H-XWt" id="O1J-1J-38l"/>
+                        <outlet property="detailPrice" destination="NlA-dL-EYF" id="r38-ax-jn1"/>
+                        <outlet property="navigationBar" destination="3JA-rZ-8Bu" id="o3g-A2-nX8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vjr-l1-HqT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="84"/>
+            <point key="canvasLocation" x="876.81159420289862" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

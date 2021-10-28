@@ -6,24 +6,37 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var detailName: UILabel!
+    @IBOutlet weak var detailPrice: UILabel!
+    @IBOutlet weak var detailDate: UILabel!
+    @IBOutlet weak var detailImage: UIImageView!
+    
+    var image : String?
+    var name : String?
+    var price : Float?
+    var date : String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configureUI()
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backButtonClick(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    func configureUI(){
+        detailImage.sd_setImage(with: URL(string: image ?? ""))
+        detailName.text = "Collection Name : " + name!
+        detailPrice.text = "Price : $ \(String(describing: price))"
+        detailDate.text = "Release : " + date!
+        
+    }
 
 }

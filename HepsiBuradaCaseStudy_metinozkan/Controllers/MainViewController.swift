@@ -28,7 +28,12 @@ class MainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDetail" {
-            print("detaila go ")
+            if let destination = segue.destination as? DetailViewController, let index = searchTableView.indexPathForSelectedRow {
+                destination.name = searchData[index.row].collectionName
+                destination.date = searchData[index.row].releaseDate
+                destination.image = searchData[index.row].artworkUrl100
+                destination.price = searchData[index.row].collectionPrice
+            }
         }
     }
     
