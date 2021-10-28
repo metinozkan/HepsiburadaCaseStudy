@@ -26,6 +26,13 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goDetail" {
+            print("detaila go ")
+        }
+    }
+    
+    
     func configureUI() {
         self.searchTableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
     }
@@ -67,7 +74,8 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate {
         }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tıklandı \(indexPath.row). index")
+        performSegue(withIdentifier: "goDetail", sender: nil)
+        
     }
     
     
