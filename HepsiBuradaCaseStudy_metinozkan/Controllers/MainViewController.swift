@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
@@ -38,7 +40,6 @@ class MainViewController: UIViewController {
         }
     }
     
-
     @IBAction func segmentedClicked(_ sender: Any) {
     }
     
@@ -58,11 +59,16 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate {
 //            cell.textLabel?.text = "metin"
             let cell = searchTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
             let data = searchData[indexPath.row]
+            cell.itemImage.sd_setImage(with: URL(string: data.artworkUrl100 ?? ""))
             cell.itemName.text = data.collectionName
             cell.itemDate.text = data.releaseDate
             cell.itemPrice.text = "$ \(data.collectionPrice)"
             return cell
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tıklandı \(indexPath.row). index")
+    }
     
     
 }
