@@ -84,7 +84,7 @@
                 <outlet property="backView" destination="dsh-DR-WFJ" id="KVU-ig-Gw9"/>
                 <outlet property="itemDate" destination="aGa-H2-vD0" id="Alu-oO-32C"/>
                 <outlet property="itemImage" destination="GIf-aw-N3Z" id="Yzm-MU-PhZ"/>
-                <outlet property="itemName" destination="dsh-DR-WFJ" id="LnL-GD-HlC"/>
+                <outlet property="itemName" destination="9vX-Ox-6Sd" id="zoG-Om-qIa"/>
                 <outlet property="itemPrice" destination="gkk-zu-bj0" id="xB5-YN-ZFO"/>
             </connections>
             <point key="canvasLocation" x="213.04347826086959" y="-55.580357142857139"/>

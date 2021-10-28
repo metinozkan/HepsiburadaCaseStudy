@@ -11,7 +11,7 @@ class SearchCell: UITableViewCell {
 
     @IBOutlet weak var backView: UIView!
     @IBOutlet weak var itemImage: UIImageView!
-    @IBOutlet weak var itemName: UIView!
+    @IBOutlet weak var itemName: UILabel!
     @IBOutlet weak var itemPrice: UILabel!
     @IBOutlet weak var itemDate: UILabel!
     
