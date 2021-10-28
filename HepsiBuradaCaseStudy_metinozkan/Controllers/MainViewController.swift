@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
         data()
-
+       
         // Do any additional setup after loading the view.
     }
     
@@ -43,13 +43,21 @@ class MainViewController: UIViewController {
     }
     
     func data() {
-        service.getData(term: "wewill",skip: self.skip,entity: "album") { results in
-            guard let data = results else {return}
-            self.searchData = data
-            DispatchQueue.main.async {
-                self.searchTableView.reloadData()
+       
+        self.showSpinner()
+            service.getData(term: "wewill",skip: self.skip,entity: "album") { results in
+                guard let data = results else {return}
+                self.searchData = data
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                    self.removeSpinner()
+                }
+               
+                DispatchQueue.main.async {
+                    self.searchTableView.reloadData()
+                }
             }
-        }
+        
+      
     }
     
     @IBAction func segmentedClicked(_ sender: Any) {
@@ -76,8 +84,6 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
             cell.itemDate.text = data.releaseDate
             cell.itemPrice.text = "$ \(data.collectionPrice)"
             
-        
-            
             
             return cell
         }
@@ -90,8 +96,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
     private func scrollViewDidScroll(_ scrollView: UIScrollView!){
         let position = scrollView.contentOffset.y
       
-        if position > (searchTableView.contentSize.height - scrollView.frame.size.height){
-            print("fetch more data")
+        if position > (searchTableView.contentSize.height - 100 - scrollView.frame.size.height){
             skip = skip + 1
             data()
         }
