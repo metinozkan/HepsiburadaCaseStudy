@@ -8,6 +8,7 @@
 import UIKit
 import SDWebImage
 import Foundation
+import HLBarIndicatorView
 
 class MainViewController: UIViewController {
     
@@ -20,6 +21,7 @@ class MainViewController: UIViewController {
     var selectedSegment = "movie"
     var isMoreDataLoading = false
     var searchBarText = ""
+    var loading = HLBarIndicatorView()
     
     let spinner = UIActivityIndicatorView(style: .large)
     let service = Service()
@@ -42,8 +44,8 @@ class MainViewController: UIViewController {
                 destination.date = date
                 destination.image = searchData[index.row].artworkUrl100
                 destination.price = searchData[index.row].collectionPrice
-               
-
+                
+                
             }
         }
     }
@@ -56,12 +58,13 @@ class MainViewController: UIViewController {
     
     func data(term: String) {
         
-        print(searchBarText,self.selectedSegment)
-        
+        print(searchBarText,self.selectedSegment, self.isMoreDataLoading)
+        if !self.spinner.isAnimating
+       { loadingSpinner()}
         if !self.isMoreDataLoading {
             self.isMoreDataLoading = true
             DispatchQueue.main.async {
-                sleep(1)
+                sleep(2)
                 self.service.getData(term:term, skip: self.skip, entity: self.selectedSegment) { results in
                     self.spinner.stopAnimating()
                     if (results != nil){
@@ -72,6 +75,7 @@ class MainViewController: UIViewController {
                     else {
                         self.searchData = []
                         self.searchTableView.reloadData()
+                        self.isMoreDataLoading = false
                     }
                     
                 }
@@ -86,26 +90,39 @@ class MainViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             selectedSegment = "movie"
-            //                        data(term: searchBarText)
-            //                        searchTableView.reloadData()
+            data(term: searchBarText)
+            searchTableView.reloadData()
         case 1:
-            selectedSegment = "Music"
-            //            data(term: searchBarText)
-            //            searchTableView.reloadData()
+            selectedSegment = "song"
+            data(term: searchBarText)
+            searchTableView.reloadData()
         case 2:
-            selectedSegment = "Apps"
-            //            data(term: searchBarText)
-            //            searchTableView.reloadData()
+            selectedSegment = "podcast"
+            data(term: searchBarText)
+            searchTableView.reloadData()
         case 3:
-            selectedSegment = "Books"
-            //            data(term: searchBarText)
-            //            searchTableView.reloadData()
+            selectedSegment = "ebook"
+            data(term: searchBarText)
+            searchTableView.reloadData()
         default:
             return
         }
     }
     
+    func loadingSpinner(){
+             let indicatorView = HLBarIndicatorView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 80))
+             indicatorView.indicatorType = .barScaleFromRight
+             indicatorView.center = self.view.center
+             indicatorView.barColor = .systemYellow
+             self.loading.startAnimating()
+             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                self.loading.pauseAnimating()
+                indicatorView.isHidden = true
+             }
+             self.view.addSubview(indicatorView)
+        }
     
+
 }
 
 
@@ -131,7 +148,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //            let cell = UITableViewCell()
         //            cell.textLabel?.text = "metin"
-    
+        
         let cell = searchTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
         let data = searchData[indexPath.row]
         cell.itemImage.sd_setImage(with: URL(string: data.artworkUrl100 ?? ""))
@@ -164,6 +181,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
         
         if indexPath.section == lastSectionIndex && indexPath.row == lastRowIndex {
             self.spinner.startAnimating()
+          
             tableView.tableFooterView = spinner
             tableView.tableFooterView?.isHidden = false
             if (!isMoreDataLoading){

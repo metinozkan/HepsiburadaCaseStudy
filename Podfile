@@ -8,6 +8,7 @@ target 'HepsiBuradaCaseStudy_metinozkan' do
 	
   pod 'Alamofire', '~> 5.4'
   pod 'SDWebImage', '~> 5.0'
+  pod 'HLBarIndicatorView'
 
   # Pods for HepsiBuradaCaseStudy_metinozkan
 

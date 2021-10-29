@@ -15,7 +15,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailPrice: UILabel!
     @IBOutlet weak var detailDate: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
-    
+    @IBOutlet weak var backView: UIView!
+  
     var image : String?
     var name : String?
     var price : Float?
@@ -36,6 +37,9 @@ class DetailViewController: UIViewController {
         detailName.text = "Collection Name : " + name!
         detailPrice.text = "Price : $ \(price ?? 0.0 )"
         detailDate.text = "Release : " + date!
+//        backView.layer.cornerRadius = 20
+//        backView.layer.borderColor = UIColor.gray.cgColor
+//        backView.layer.borderWidth = 2
         
     }
 
