@@ -16,18 +16,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95d-mz-iN3">
-                                <rect key="frame" x="171.5" y="437.5" width="71" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Dmm-Px-M0c">
+                                <rect key="frame" x="75.5" y="317" width="263.5" height="262.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="yHu-fD-cRS">
+                                        <rect key="frame" x="33.5" y="0.0" width="196" height="196"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="196" id="0YH-IA-SlR"/>
+                                            <constraint firstAttribute="height" constant="196" id="Wh4-de-E3l"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HepsiBurada CaseStudy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk8-oB-X9f">
+                                        <rect key="frame" x="0.0" y="204" width="263.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metin Ozkan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UD8-Wn-qh4">
+                                        <rect key="frame" x="84" y="242" width="95.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="95d-mz-iN3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="KO5-I4-2Td"/>
-                            <constraint firstItem="95d-mz-iN3" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="iei-LY-p2N"/>
+                            <constraint firstItem="Dmm-Px-M0c" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="289-8s-SsL"/>
+                            <constraint firstItem="Dmm-Px-M0c" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rgk-DK-vis"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +55,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="launchScreen" width="196" height="196"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
