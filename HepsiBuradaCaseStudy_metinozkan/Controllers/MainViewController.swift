@@ -63,9 +63,9 @@ class MainViewController: UIViewController {
                         self.searchTableView.reloadData()
                         self.isMoreDataLoading = false
                     }
-                 else {
-                     self.searchData = []
-                     self.searchTableView.reloadData()
+                    else {
+                        self.searchData = []
+                        self.searchTableView.reloadData()
                     }
                     
                 }
@@ -80,33 +80,46 @@ class MainViewController: UIViewController {
         switch sender.selectedSegmentIndex {
         case 0:
             selectedSegment = "movie"
-//                        data(term: searchBarText)
-//                        searchTableView.reloadData()
+            //                        data(term: searchBarText)
+            //                        searchTableView.reloadData()
         case 1:
             selectedSegment = "Music"
-    //            data(term: searchBarText)
-    //            searchTableView.reloadData()
+            //            data(term: searchBarText)
+            //            searchTableView.reloadData()
         case 2:
             selectedSegment = "Apps"
-//            data(term: searchBarText)
-//            searchTableView.reloadData()
+            //            data(term: searchBarText)
+            //            searchTableView.reloadData()
         case 3:
             selectedSegment = "Books"
-//            data(term: searchBarText)
-//            searchTableView.reloadData()
+            //            data(term: searchBarText)
+            //            searchTableView.reloadData()
         default:
             return
         }
     }
     
+    
 }
+
+
 
 
 extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate {
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if self.searchData.count == 0 {
+            self.searchTableView.setEmptyMessage("Empty Page !")
+        } else {
+            self.searchTableView.restore()
+        }
+        
         return self.searchData.count
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -164,13 +177,13 @@ extension MainViewController : UISearchBarDelegate{
         }
     }
     
-//        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//            searchBar.text = ""
-//            searchBar.endEditing(true)
-//            self.searchData.removeAll()
-//            self.searchData = []
-//            self.searchTableView.reloadData()
-//        }
+    //        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    //            searchBar.text = ""
+    //            searchBar.endEditing(true)
+    //            self.searchData.removeAll()
+    //            self.searchData = []
+    //            self.searchTableView.reloadData()
+    //        }
     
     
 }
