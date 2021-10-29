@@ -147,6 +147,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "goDetail", sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
         
     }
     
