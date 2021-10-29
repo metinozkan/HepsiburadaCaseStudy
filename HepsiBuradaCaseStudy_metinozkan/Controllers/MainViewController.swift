@@ -54,13 +54,15 @@ class MainViewController: UIViewController {
     func configureUI() {
         self.searchTableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
         
+//        self.searchBar.showsCancelButton = true
+        
     }
     
     func data(term: String) {
         
         print(searchBarText,self.selectedSegment, self.isMoreDataLoading)
         if !self.spinner.isAnimating
-       { loadingSpinner()}
+        { loadingSpinner()}
         if !self.isMoreDataLoading {
             self.isMoreDataLoading = true
             DispatchQueue.main.async {
@@ -110,19 +112,19 @@ class MainViewController: UIViewController {
     }
     
     func loadingSpinner(){
-             let indicatorView = HLBarIndicatorView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 80))
-             indicatorView.indicatorType = .barScaleFromRight
-             indicatorView.center = self.view.center
-             indicatorView.barColor = .systemYellow
-             self.loading.startAnimating()
-             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                self.loading.pauseAnimating()
-                indicatorView.isHidden = true
-             }
-             self.view.addSubview(indicatorView)
+        let indicatorView = HLBarIndicatorView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 80))
+        indicatorView.indicatorType = .barScaleFromRight
+        indicatorView.center = self.view.center
+        indicatorView.barColor = .systemYellow
+        self.loading.startAnimating()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.loading.pauseAnimating()
+            indicatorView.isHidden = true
         }
+        self.view.addSubview(indicatorView)
+    }
     
-
+    
 }
 
 
@@ -181,7 +183,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
         
         if indexPath.section == lastSectionIndex && indexPath.row == lastRowIndex {
             self.spinner.startAnimating()
-          
+            
             tableView.tableFooterView = spinner
             tableView.tableFooterView?.isHidden = false
             if (!isMoreDataLoading){
@@ -206,14 +208,19 @@ extension MainViewController : UISearchBarDelegate{
         }
     }
     
-    //        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-    //            searchBar.text = ""
-    //            searchBar.endEditing(true)
-    //            self.searchData.removeAll()
-    //            self.searchData = []
-    //            self.searchTableView.reloadData()
-    //        }
-    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+     
+       
+    }
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            print("clickcancel")
+            searchBar.endEditing(true)
+            self.searchBarText = ""
+            self.searchData = []
+            self.searchTableView.reloadData()
+        }
+    }
     
 }
 
