@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
     func configureUI(){
         detailImage.sd_setImage(with: URL(string: image ?? ""))
         detailName.text = "Collection Name : " + name!
-        detailPrice.text = "Price : $ \(String(describing: price))"
+        detailPrice.text = "Price : $ \(price ?? 0.0 )"
         detailDate.text = "Release : " + date!
         
     }

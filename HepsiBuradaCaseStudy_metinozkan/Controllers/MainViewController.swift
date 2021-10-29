@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import Foundation
 
 class MainViewController: UIViewController {
     
@@ -35,9 +36,14 @@ class MainViewController: UIViewController {
         if segue.identifier == "goDetail" {
             if let destination = segue.destination as? DetailViewController, let index = searchTableView.indexPathForSelectedRow {
                 destination.name = searchData[index.row].collectionName ?? "empty"
-                destination.date = searchData[index.row].releaseDate
+                
+                let splitDateString = searchData[index.row].releaseDate?.components(separatedBy: "T")
+                let date: String = splitDateString![0]
+                destination.date = date
                 destination.image = searchData[index.row].artworkUrl100
                 destination.price = searchData[index.row].collectionPrice
+               
+
             }
         }
     }
@@ -125,12 +131,16 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //            let cell = UITableViewCell()
         //            cell.textLabel?.text = "metin"
+    
         let cell = searchTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
         let data = searchData[indexPath.row]
         cell.itemImage.sd_setImage(with: URL(string: data.artworkUrl100 ?? ""))
         cell.itemName.text = data.collectionName ?? "empty"
-        cell.itemDate.text = data.releaseDate
-        cell.itemPrice.text = "$ \( data.collectionPrice)"
+        
+        let splitDateString = data.releaseDate?.components(separatedBy: "T")
+        var date: String = splitDateString![0]
+        cell.itemDate.text = date
+        cell.itemPrice.text = "$ \( data.collectionPrice ?? 0.0 )"
         
         return cell
     }
