@@ -46,7 +46,6 @@ class MainViewController: UIViewController {
                 destination.image = searchData[index.row].artworkUrl100
                 destination.price = searchData[index.row].collectionPrice
                 
-                
             }
         }
     }
@@ -54,6 +53,7 @@ class MainViewController: UIViewController {
     
     func configureUI() {
         self.searchTableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
+        
         //        self.searchTableView.estimatedRowHeight = 44
         //        self.searchBar.showsCancelButton = true
         

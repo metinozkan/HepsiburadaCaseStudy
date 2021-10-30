@@ -37,6 +37,7 @@ class DetailViewController: UIViewController {
         detailName.text = "Collection Name : " + name!
         detailPrice.text = "Price : $ \(price ?? 0.0 )"
         detailDate.text = "Release : " + date!
+        navigationBar.topItem?.title = name!
 //        backView.layer.cornerRadius = 20
 //        backView.layer.borderColor = UIColor.gray.cgColor
 //        backView.layer.borderWidth = 2
