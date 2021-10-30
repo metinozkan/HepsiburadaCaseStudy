@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
     var isMoreDataLoading = false
     var searchBarText = ""
     var loading = HLBarIndicatorView()
+    var searchWorkItem: DispatchWorkItem?
     
     let spinner = UIActivityIndicatorView(style: .large)
     let service = Service()
@@ -53,14 +54,14 @@ class MainViewController: UIViewController {
     
     func configureUI() {
         self.searchTableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
-        
-//        self.searchBar.showsCancelButton = true
+        //        self.searchTableView.estimatedRowHeight = 44
+        //        self.searchBar.showsCancelButton = true
         
     }
     
     func data(term: String) {
         
-        print(searchBarText,self.selectedSegment, self.isMoreDataLoading)
+        print(term,self.selectedSegment, self.isMoreDataLoading)
         if !self.spinner.isAnimating
         { loadingSpinner()}
         if !self.isMoreDataLoading {
@@ -157,7 +158,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
         cell.itemName.text = data.collectionName ?? "empty"
         
         let splitDateString = data.releaseDate?.components(separatedBy: "T")
-        var date: String = splitDateString![0]
+        let date: String = splitDateString![0]
         cell.itemDate.text = date
         cell.itemPrice.text = "$ \( data.collectionPrice ?? 0.0 )"
         
@@ -194,24 +195,27 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
         
     }
     
+    
 }
 
 extension MainViewController : UISearchBarDelegate{
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if searchBar.text!.count >= 2 {
-            self.searchBarText = searchBar.text!
-            data(term: self.searchBarText)
-            DispatchQueue.main.async {
-                self.searchTableView.reloadData()
-            }
-        }
-    }
+//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+//        if searchBar.text!.count >= 2 {
+//            self.searchBarText = searchBar.text!
+//            data(term: self.searchBarText)
+//            DispatchQueue.main.async {
+//                self.searchTableView.reloadData()
+//            }
+//        }
+//    }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-     
-       
+        
+        
     }
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
             print("clickcancel")
@@ -220,7 +224,19 @@ extension MainViewController : UISearchBarDelegate{
             self.searchData = []
             self.searchTableView.reloadData()
         }
+        
+        guard let text = searchBar.text, text.count >= 2 else { return }
+        searchWorkItem?.cancel()
+        let newTask = DispatchWorkItem { [weak self] in
+            self!.data(term: text)
+        }
+        self.searchWorkItem = newTask
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: newTask)
     }
     
+    
+    
 }
+
+
 
