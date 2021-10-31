@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39149D5B2DC2D1F91C43A3D0 /* Pods_HepsiBuradaCaseStudy_metinozkan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEF2B5163C15108C97CE72B /* Pods_HepsiBuradaCaseStudy_metinozkan.framework */; };
+		BF0ABE15272B23E200B1A03A /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ABE14272B23E200B1A03A /* Service.swift */; };
+		BF0ABE17272B242600B1A03A /* search.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ABE16272B242600B1A03A /* search.swift */; };
+		BF0ABE19272B24D700B1A03A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ABE18272B24D700B1A03A /* Constants.swift */; };
+		BF0ABE1B272B24E100B1A03A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ABE1A272B24E100B1A03A /* Extensions.swift */; };
 		BF74F988272AC7800025C30A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F987272AC7800025C30A /* AppDelegate.swift */; };
 		BF74F98A272AC7800025C30A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F989272AC7800025C30A /* SceneDelegate.swift */; };
 		BF74F98C272AC7800025C30A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F98B272AC7800025C30A /* ViewController.swift */; };
@@ -16,6 +21,12 @@
 		BF74F99F272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F99E272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanTests.swift */; };
 		BF74F9A9272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F9A8272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift */; };
 		BF74F9AB272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74F9AA272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift */; };
+		BFE7BD95272B08AE007BF0CA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD94272B08AE007BF0CA /* MainViewController.swift */; };
+		BFE7BD97272B08DE007BF0CA /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */; };
+		BFE7BD9A272B104A007BF0CA /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7BD98272B104A007BF0CA /* SearchCell.swift */; };
+		BFE7BD9B272B104A007BF0CA /* SearchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFE7BD99272B104A007BF0CA /* SearchCell.xib */; };
+		E1A7D0738008642B16CABDF4 /* Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB56DE4F22F3188AA5CFBF0 /* Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework */; };
+		EB4B6A29824409E3FE7D2DC3 /* Pods_HepsiBuradaCaseStudy_metinozkanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E245AA03D6863C5F6D58179 /* Pods_HepsiBuradaCaseStudy_metinozkanTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +47,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00C3B59444A6923EF8DA0B6F /* Pods-HepsiBuradaCaseStudy_metinozkan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkan.release.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan/Pods-HepsiBuradaCaseStudy_metinozkan.release.xcconfig"; sourceTree = "<group>"; };
+		1CEF2B5163C15108C97CE72B /* Pods_HepsiBuradaCaseStudy_metinozkan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HepsiBuradaCaseStudy_metinozkan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F832973CA4952A398D44836 /* Pods-HepsiBuradaCaseStudy_metinozkan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkan.debug.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan/Pods-HepsiBuradaCaseStudy_metinozkan.debug.xcconfig"; sourceTree = "<group>"; };
+		780CAB8BD3FE90E04EC13F74 /* Pods-HepsiBuradaCaseStudy_metinozkanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkanTests.debug.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkanTests/Pods-HepsiBuradaCaseStudy_metinozkanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E245AA03D6863C5F6D58179 /* Pods_HepsiBuradaCaseStudy_metinozkanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HepsiBuradaCaseStudy_metinozkanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9794A09720AAFFCF1E5D1515 /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.debug.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF0ABE14272B23E200B1A03A /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		BF0ABE16272B242600B1A03A /* search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = search.swift; sourceTree = "<group>"; };
+		BF0ABE18272B24D700B1A03A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BF0ABE1A272B24E100B1A03A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BF74F984272AC7800025C30A /* HepsiBuradaCaseStudy_metinozkan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HepsiBuradaCaseStudy_metinozkan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF74F987272AC7800025C30A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF74F989272AC7800025C30A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +70,13 @@
 		BF74F9A4272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HepsiBuradaCaseStudy_metinozkanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF74F9A8272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HepsiBuradaCaseStudy_metinozkanUITests.swift; sourceTree = "<group>"; };
 		BF74F9AA272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HepsiBuradaCaseStudy_metinozkanUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BFE7BD94272B08AE007BF0CA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFE7BD98272B104A007BF0CA /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		BFE7BD99272B104A007BF0CA /* SearchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchCell.xib; sourceTree = "<group>"; };
+		CBB56DE4F22F3188AA5CFBF0 /* Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20E8F5F7BE9BC8FDF4CB98F /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.release.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D846C5CE83A9AB4E9D0F2FAA /* Pods-HepsiBuradaCaseStudy_metinozkanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HepsiBuradaCaseStudy_metinozkanTests.release.xcconfig"; path = "Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkanTests/Pods-HepsiBuradaCaseStudy_metinozkanTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39149D5B2DC2D1F91C43A3D0 /* Pods_HepsiBuradaCaseStudy_metinozkan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB4B6A29824409E3FE7D2DC3 /* Pods_HepsiBuradaCaseStudy_metinozkanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +100,44 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A7D0738008642B16CABDF4 /* Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9309FAEEC14179E1C57ECAC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F832973CA4952A398D44836 /* Pods-HepsiBuradaCaseStudy_metinozkan.debug.xcconfig */,
+				00C3B59444A6923EF8DA0B6F /* Pods-HepsiBuradaCaseStudy_metinozkan.release.xcconfig */,
+				9794A09720AAFFCF1E5D1515 /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.debug.xcconfig */,
+				D20E8F5F7BE9BC8FDF4CB98F /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.release.xcconfig */,
+				780CAB8BD3FE90E04EC13F74 /* Pods-HepsiBuradaCaseStudy_metinozkanTests.debug.xcconfig */,
+				D846C5CE83A9AB4E9D0F2FAA /* Pods-HepsiBuradaCaseStudy_metinozkanTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2E119BCA37AB0DD2BA8CD93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CEF2B5163C15108C97CE72B /* Pods_HepsiBuradaCaseStudy_metinozkan.framework */,
+				CBB56DE4F22F3188AA5CFBF0 /* Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests.framework */,
+				8E245AA03D6863C5F6D58179 /* Pods_HepsiBuradaCaseStudy_metinozkanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF0ABE13272B23D400B1A03A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				BF0ABE14272B23E200B1A03A /* Service.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		BF74F97B272AC7800025C30A = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +145,8 @@
 				BF74F99D272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanTests */,
 				BF74F9A7272AC7840025C30A /* HepsiBuradaCaseStudy_metinozkanUITests */,
 				BF74F985272AC7800025C30A /* Products */,
+				9309FAEEC14179E1C57ECAC4 /* Pods */,
+				A2E119BCA37AB0DD2BA8CD93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +163,10 @@
 		BF74F986272AC7800025C30A /* HepsiBuradaCaseStudy_metinozkan */ = {
 			isa = PBXGroup;
 			children = (
+				BFE7BD8F272B0009007BF0CA /* Utils */,
+				BFE7BD8E272AFFFC007BF0CA /* Controllers */,
+				BFE7BD8D272AFFF5007BF0CA /* Views */,
+				BFE7BD8C272AFFEB007BF0CA /* Models */,
 				BF74F987272AC7800025C30A /* AppDelegate.swift */,
 				BF74F989272AC7800025C30A /* SceneDelegate.swift */,
 				BF74F98B272AC7800025C30A /* ViewController.swift */,
@@ -127,6 +195,42 @@
 			path = HepsiBuradaCaseStudy_metinozkanUITests;
 			sourceTree = "<group>";
 		};
+		BFE7BD8C272AFFEB007BF0CA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BF0ABE16272B242600B1A03A /* search.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BFE7BD8D272AFFF5007BF0CA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7BD98272B104A007BF0CA /* SearchCell.swift */,
+				BFE7BD99272B104A007BF0CA /* SearchCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BFE7BD8E272AFFFC007BF0CA /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BFE7BD94272B08AE007BF0CA /* MainViewController.swift */,
+				BFE7BD96272B08DE007BF0CA /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BFE7BD8F272B0009007BF0CA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BF0ABE13272B23D400B1A03A /* Api */,
+				BF0ABE18272B24D700B1A03A /* Constants.swift */,
+				BF0ABE1A272B24E100B1A03A /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF74F9AE272AC7840025C30A /* Build configuration list for PBXNativeTarget "HepsiBuradaCaseStudy_metinozkan" */;
 			buildPhases = (
+				6342645DD0BC9024C0A4A26C /* [CP] Check Pods Manifest.lock */,
 				BF74F980272AC7800025C30A /* Sources */,
 				BF74F981272AC7800025C30A /* Frameworks */,
 				BF74F982272AC7800025C30A /* Resources */,
+				AB40552D33DB898D1B304346 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +257,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF74F9B1272AC7840025C30A /* Build configuration list for PBXNativeTarget "HepsiBuradaCaseStudy_metinozkanTests" */;
 			buildPhases = (
+				0B54F951B9E9970C2C3283DA /* [CP] Check Pods Manifest.lock */,
 				BF74F996272AC7840025C30A /* Sources */,
 				BF74F997272AC7840025C30A /* Frameworks */,
 				BF74F998272AC7840025C30A /* Resources */,
@@ -169,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF74F9B4272AC7840025C30A /* Build configuration list for PBXNativeTarget "HepsiBuradaCaseStudy_metinozkanUITests" */;
 			buildPhases = (
+				6FF3D05BD15E928220E9D61F /* [CP] Check Pods Manifest.lock */,
 				BF74F9A0272AC7840025C30A /* Sources */,
 				BF74F9A1272AC7840025C30A /* Frameworks */,
 				BF74F9A2272AC7840025C30A /* Resources */,
+				63D2556DFBBDAA67653B43A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF74F994272AC7830025C30A /* LaunchScreen.storyboard in Resources */,
+				BFE7BD9B272B104A007BF0CA /* SearchCell.xib in Resources */,
 				BF74F991272AC7830025C30A /* Assets.xcassets in Resources */,
 				BF74F98F272AC7800025C30A /* Main.storyboard in Resources */,
 			);
@@ -253,14 +363,124 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B54F951B9E9970C2C3283DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HepsiBuradaCaseStudy_metinozkanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6342645DD0BC9024C0A4A26C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HepsiBuradaCaseStudy_metinozkan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63D2556DFBBDAA67653B43A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FF3D05BD15E928220E9D61F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB40552D33DB898D1B304346 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan/Pods-HepsiBuradaCaseStudy_metinozkan-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan/Pods-HepsiBuradaCaseStudy_metinozkan-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HepsiBuradaCaseStudy_metinozkan/Pods-HepsiBuradaCaseStudy_metinozkan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF74F980272AC7800025C30A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BF74F98C272AC7800025C30A /* ViewController.swift in Sources */,
+				BF0ABE15272B23E200B1A03A /* Service.swift in Sources */,
+				BFE7BD9A272B104A007BF0CA /* SearchCell.swift in Sources */,
 				BF74F988272AC7800025C30A /* AppDelegate.swift in Sources */,
+				BFE7BD97272B08DE007BF0CA /* DetailViewController.swift in Sources */,
+				BF0ABE1B272B24E100B1A03A /* Extensions.swift in Sources */,
+				BF0ABE17272B242600B1A03A /* search.swift in Sources */,
 				BF74F98A272AC7800025C30A /* SceneDelegate.swift in Sources */,
+				BFE7BD95272B08AE007BF0CA /* MainViewController.swift in Sources */,
+				BF0ABE19272B24D700B1A03A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +654,7 @@
 		};
 		BF74F9AF272AC7840025C30A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F832973CA4952A398D44836 /* Pods-HepsiBuradaCaseStudy_metinozkan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -461,6 +682,7 @@
 		};
 		BF74F9B0272AC7840025C30A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C3B59444A6923EF8DA0B6F /* Pods-HepsiBuradaCaseStudy_metinozkan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +710,7 @@
 		};
 		BF74F9B2272AC7840025C30A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 780CAB8BD3FE90E04EC13F74 /* Pods-HepsiBuradaCaseStudy_metinozkanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +735,7 @@
 		};
 		BF74F9B3272AC7840025C30A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D846C5CE83A9AB4E9D0F2FAA /* Pods-HepsiBuradaCaseStudy_metinozkanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -536,6 +760,7 @@
 		};
 		BF74F9B5272AC7840025C30A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9794A09720AAFFCF1E5D1515 /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -558,6 +783,7 @@
 		};
 		BF74F9B6272AC7840025C30A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D20E8F5F7BE9BC8FDF4CB98F /* Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

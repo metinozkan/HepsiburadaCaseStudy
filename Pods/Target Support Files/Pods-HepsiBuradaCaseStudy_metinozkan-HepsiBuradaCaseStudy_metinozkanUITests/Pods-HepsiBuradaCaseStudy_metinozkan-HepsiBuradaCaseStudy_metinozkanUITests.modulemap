@@ -1,0 +1,6 @@
+framework module Pods_HepsiBuradaCaseStudy_metinozkan_HepsiBuradaCaseStudy_metinozkanUITests {
+  umbrella header "Pods-HepsiBuradaCaseStudy_metinozkan-HepsiBuradaCaseStudy_metinozkanUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
