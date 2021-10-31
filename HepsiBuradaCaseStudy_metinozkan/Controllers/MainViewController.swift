@@ -54,14 +54,10 @@ class MainViewController: UIViewController {
     func configureUI() {
         self.searchTableView.register(UINib(nibName: "SearchCell", bundle: nil), forCellReuseIdentifier: "searchCell")
         
-        //        self.searchTableView.estimatedRowHeight = 44
-        //        self.searchBar.showsCancelButton = true
-        
     }
     
     func data(term: String) {
         
-        print(term,self.selectedSegment, self.isMoreDataLoading)
         if !self.spinner.isAnimating
         { loadingSpinner()}
         if !self.isMoreDataLoading {
@@ -92,26 +88,28 @@ class MainViewController: UIViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
-            selectedSegment = "movie"
-            data(term: searchBarText)
-            searchTableView.reloadData()
+            fetchDataFromClickSegment(segment: "movie")
+            
         case 1:
-            selectedSegment = "song"
-            data(term: searchBarText)
-            searchTableView.reloadData()
+            fetchDataFromClickSegment(segment: "song")
+            
         case 2:
-            selectedSegment = "podcast"
-            data(term: searchBarText)
-            searchTableView.reloadData()
+            fetchDataFromClickSegment(segment: "podcast")
+            
         case 3:
-            selectedSegment = "ebook"
-            data(term: searchBarText)
-            searchTableView.reloadData()
+            fetchDataFromClickSegment(segment: "ebook")
+            
         default:
             return
         }
     }
-    
+    func fetchDataFromClickSegment (segment: String) {
+        if searchBarText.count >= 2{
+            selectedSegment = segment
+            data(term: searchBarText)
+            searchTableView.reloadData()}
+        
+    }
     func loadingSpinner(){
         let indicatorView = HLBarIndicatorView(frame: CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 80))
         indicatorView.indicatorType = .barScaleFromRight
@@ -149,8 +147,7 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //            let cell = UITableViewCell()
-        //            cell.textLabel?.text = "metin"
+        
         
         let cell = searchTableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! SearchCell
         let data = searchData[indexPath.row]
@@ -200,25 +197,22 @@ extension MainViewController :UITableViewDataSource,UITableViewDelegate,UIScroll
 
 extension MainViewController : UISearchBarDelegate{
     
-//    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-//        if searchBar.text!.count >= 2 {
-//            self.searchBarText = searchBar.text!
-//            data(term: self.searchBarText)
-//            DispatchQueue.main.async {
-//                self.searchTableView.reloadData()
-//            }
-//        }
-//    }
+    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    //        if searchBar.text!.count >= 2 {
+    //            self.searchBarText = searchBar.text!
+    //            data(term: self.searchBarText)
+    //            DispatchQueue.main.async {
+    //                self.searchTableView.reloadData()
+    //            }
+    //        }
+    //    }
     
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
-        
-    }
+ 
     
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText == "" {
-            print("clickcancel")
+            
             searchBar.endEditing(true)
             self.searchBarText = ""
             self.searchData = []
@@ -226,6 +220,7 @@ extension MainViewController : UISearchBarDelegate{
         }
         
         guard let text = searchBar.text, text.count >= 2 else { return }
+        searchBarText = text
         searchWorkItem?.cancel()
         let newTask = DispatchWorkItem { [weak self] in
             self!.data(term: text)
