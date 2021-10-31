@@ -2,4 +2,4 @@
 
 ### Here is a litte showcase for you.
 
-![alt-text](caseStudyGif.gif)
+<img src="./caseStudyGif.gif" width="220" height="500"/>
